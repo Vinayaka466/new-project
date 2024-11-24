@@ -1,0 +1,19 @@
+{% extends 'main.html' %} {% block body_block %}
+ {% for item in user_products %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6" style="padding: 10px; height: auto;">
+            <img src="{{item.image.url}}" alt="Not Avaliable" class="img-thumbnail">
+        </div>
+        <div class="col-md-6"style="margin: 6pxpx; font: bold;">
+            <div class="img-thumbnail">
+            <h2>{{item.name}}</h2><br>
+            <h2>₹ {{item.price}}</h2><br>
+            <h2>{{item.description}}</h2><br>
+            <a href="{% url 'removewish' id=item.id %}" class="btn btn-primary">Remove</a>
+        </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

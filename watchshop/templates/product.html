@@ -1,0 +1,17 @@
+{% extends 'main.html' %}  {% block body_block %}
+<div class="p-3 mb-2 bg-secondary text-white" style="margin: 9px;">
+    <marquee><h5 style="color: white">We Are Providing 50% Offer This Product</h5></marquee></div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6" style="padding: 10px; height: auto;">
+            <img src="{{product.image.url}}" alt="Not avalbale" class="img-thumbnail">
+        </div>
+        <div class="col-md-6"style="margin: 6pxpx; font: bold;">
+            <div class="img-thumbnail">
+            <h2 >{{product.name}}</h2><br>
+            <h4>₹ {{product.price}}</h4><br>
+            <h3>{{product.description}}</h3><br><br><br>
+        </div>
+    </div>
+</div>
+</div>{% endblock %}

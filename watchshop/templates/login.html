@@ -1,0 +1,17 @@
+{% extends 'main.html' %} 
+{% block body_block %}
+{% load static %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="form-group">
+<h2 style="background-color: rgb(221, 248, 252);
+text-align: center;
+width: 100;
+margin: 10px;
+padding: 10px;">Login</h2>
+{{ form.as_p }}
+<button type="submit" class="submit-button">Login</button>
+<a href="{% url 'signup' %}" type="button" class="submit-button">Signup</a>
+</div>
+</form>
+{% endblock %}
